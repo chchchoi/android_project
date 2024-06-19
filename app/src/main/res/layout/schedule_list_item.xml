@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/awayImageView"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+
+        android:src="@drawable/kbo" /> <!-- 기본 이미지 설정 -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_weight="1"
+        android:text="vs" />
+
+    <ImageView
+        android:id="@+id/homeImageView"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+
+        android:src="@drawable/kbo" />
+
+</LinearLayout>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_fetch_schedule"
+            android:layout_width="123dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_with_border"
+            android:text="Today's match"
+            android:textColor="#5A5353" />
+
+        <Button
+            android:id="@+id/button_show_webview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_with_border"
+            android:text="팀 순위"
+            android:textColor="#5A5353" />
+        <Button
+            android:id="@+id/btnPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_with_border"
+            android:textColor="#5A5353"
+            android:text="선수 순위"/>
+
+        <Button
+            android:id="@+id/btnweather"
+            android:layout_width="101dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_with_border"
+            android:text=" 날씨 "
+            android:textColor="#5A5353" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/listview_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_fetch_schedule"
+            android:layout_marginTop="16dp" >
+        </ListView>
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+
+        <RadioGroup
+            android:id="@+id/rGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/rdolg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LG" />
+
+            <RadioButton
+                android:id="@+id/rdokt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KT" />
+
+            <RadioButton
+                android:id="@+id/rdossg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SSG" />
+
+            <RadioButton
+                android:id="@+id/rdonc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NC" />
+
+            <RadioButton
+                android:id="@+id/rdoob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="두산" />
+
+            <RadioButton
+                android:id="@+id/rdokia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KIA" />
+
+            <RadioButton
+                android:id="@+id/rdolt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="롯데" />
+
+            <RadioButton
+                android:id="@+id/rdoss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="삼성" />
+
+            <RadioButton
+                android:id="@+id/rdohh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="한화" />
+
+            <RadioButton
+                android:id="@+id/rdoki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="키움" />
+        </RadioGroup>
+    </FrameLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:id="@+id/card1"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/textStadium1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card 1"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+            <ImageView
+                android:id="@+id/weatherimg1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cloud"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:id="@+id/textTemp1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card 1-2"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:id="@+id/card2"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/textStadium2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card 2"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+            <ImageView
+                android:id="@+id/weatherimg2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cloud"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:id="@+id/textTemp2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card 1-2"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:id="@+id/card3"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/textStadium3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card 3"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+            <ImageView
+                android:id="@+id/weatherimg3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cloud"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:id="@+id/textTemp3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card 1-2"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:id="@+id/card4"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/textStadium4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card 1"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+            <ImageView
+                android:id="@+id/weatherimg4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cloud"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:id="@+id/textTemp4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card 1-2"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:id="@+id/card5"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/textStadium5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card 5"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+            <ImageView
+                android:id="@+id/weatherimg5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cloud"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:id="@+id/textTemp5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card 1-2"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
